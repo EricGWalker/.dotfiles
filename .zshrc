@@ -79,6 +79,11 @@ plugins+=(
     alacritty-color
 )
 
+# Zoxide must be last
+ZOXIDE_CMD_OVERRIDE='cd'
+plugins+=(zoxide)
+
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration

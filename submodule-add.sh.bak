@@ -1,0 +1,18 @@
+#!/bin/sh
+
+for d in `find -mindepth 2 -name '*.git' -type d `
+
+do
+    export url=$(git -C $d config --get remote.origin.url)
+    echo "Directory: " $d
+    for i in {0..2}; do
+        d=$(dirname $d)
+    done
+    echo "Removing: " $d
+    rm -rf $d
+
+
+    echo "URL: " $url
+    git submodule add $url $d
+done
+
