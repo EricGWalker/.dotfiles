@@ -70,13 +70,18 @@ zstyle ':omz:update' frequency 1
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+
+# Autocomplete want's to be set up first
+plugins+=(zsh-autocomplete)
+
+# Built In
+plugins+=(git)
 
 # Custom Plugins
 plugins+=(
-    #zsh-vi-mode
     lf-complete bat
     alacritty-color
+    zsh-syntax-highlighting
 )
 
 # Zoxide must be last
