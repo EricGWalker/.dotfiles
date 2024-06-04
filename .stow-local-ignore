@@ -27,3 +27,6 @@ _darcs
 
 ^/LICENSE.*
 ^/COPYING
+
+^/HELPER_SCRIPTS.*
+
